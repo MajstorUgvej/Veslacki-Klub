@@ -1,0 +1,53 @@
+
+$text-color: white;
+$pozadina:rgba(139, 157, 195, 0.635);
+$razmak: 1em 1em 5px;
+$text-size: 1vw;
+$pocetak:calc(50px + 2em + 10px);//visina logo-a+padding+10px
+
+body {
+    font-size: $text-size;
+    background-color: $pozadina;
+    min-height: 100vh;
+    padding-top: $pocetak;
+}
+
+.nav-link{
+    padding:$razmak;
+    color: $text-color;
+    font-size: x-large;
+}
+
+.nav-link:last-of-type{
+    margin-right: $text-size;
+}
+
+.nav .nav-link {
+    position: relative;
+    overflow: hidden; 
+}
+
+.nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 0;
+    height: 2px;
+    background-color: $text-color; 
+    transition: width 0.5s;
+}
+
+.nav .nav-link:hover::after {
+    width: 100%;
+}
+
+
+.footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(44,49,60);
+    color: $text-color;
+}

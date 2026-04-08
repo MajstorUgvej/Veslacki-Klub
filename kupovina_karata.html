@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kupovina karata</title>
+
+    <!-- incijalizacija -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"> </script>
+
+    <!-- zajednicki css -->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <nav class="d-flex justify-content-between align-items-center fixed-top">
+        <!-- Logo  -->
+        <a href="index.html" class="nav-link">
+            <img src="slike/logo.svg" alt="Logo" style="height:50px;"> 
+        </a>
+        <!-- Desni linkovi -->
+        <div class="nav">
+            <a class="nav-link" href="index.html">Početna</a>
+            <a class="nav-link" href="rezultati.html">Rezultati</a>
+            <a class="nav-link" href="galerija.html">Galerija</a>
+            <a class="nav-link" href="kupovina_karata.html">Kupovina karata</a>
+            <a class="nav-link" href="kontakt.html">Kontakt</a>
+            <a class="nav-link" href="anketa.html">Anketa</a>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1 class="text-center mb-4">Kupite Vašu kartu</h1>
+
+        <div class="card mx-auto" style="max-width: 600px;">
+            <img src="slike/racing.jpg" class="card-img-top" alt="Rowing Race">
+            <div class="card-body">
+                <h5 class="card-title">Regatta Ticket</h5>
+                <p class="card-text">Gledajte takmičenje u veslanju uživo! Izaberite vrstu karte i unesite svoje podatke ispod da biste obezbedili svoje mesto.</p>
+
+                <form>
+                    <div class="mb-3">
+                        <label for="punoIme" class="form-label">Ime i prezime</label>
+                        <input type="text" class="form-control" id="punoIme" name="punoIme" placeholder="Unesite ime i prezime" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Unesite email" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="vrstaKarte" class="form-label">Vrsta karte</label>
+                        <select class="form-select" id="vrstaKarte" name="vrstaKarte" required>
+                            <option value="">Izaberite vrstu karte</option>
+                            <option value="standard">Obična - $20</option>
+                            <option value="vip">VIP - $50</option>
+                            <option value="group">Grupa (4 čoveka) - $70</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="brojKarata" class="form-label">Broj karata</label>
+                        <input type="number" class="form-control" id="brojKarata" name="brojKarata" min="1" value="1" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-success w-100">Kupi kartu</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer footer-expand-lg d-flex justify-content-center align-items-center" style="height: 60px;">
+            <span><h6 style="display: inline-block;">&copy; 2025 Veslački klub doo. Sva prava zadržana.</h6>
+                <a href="https://www.facebook.com/viserbgd/?locale=sr_RS"><img src="slike/facebook-f.svg" class="img-fluid ps-1" style="width: 1rem;"  alt="facebook"></a>
+                <a href="https://www.instagram.com/viserbgd/"><img src="slike/instagram.svg" class="img-fluid ps-1" style="width: 1.5rem;" alt="instagram"></a>
+            </span>
+        </div>
+    </footer>
+</body>
+</html>

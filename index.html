@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veslacki klub</title>
+
+    <!-- incijalizacija -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"> </script>
+
+    <!-- zajednicki css -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+
+        .carousel-caption {
+            position: absolute;
+            top: 60%;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            font-size: 2.5em;
+        }
+       
+        .logo-container {
+            overflow: hidden;
+        }
+        .logo-container .slider-logo-track{
+            animation: slide 40s linear infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: calc(10vw * 33);
+        }
+        .logo-container .slider-item{
+            height: auto;
+        } 
+
+        .logo-container a img {
+            flex: 0 0 auto;
+            width: 10vw;
+            height: auto;
+            margin-right: 20px;
+            filter: grayscale(100%);
+        }
+
+        .logo:hover{
+            filter: grayscale(0%);
+        }
+        .logo-container .slider-logo-track:hover {
+            animation-play-state: paused;
+        }
+        /* Definiše animaciju */
+        @keyframes slide{
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-10vw *10)); }
+        }
+
+        .card img{
+            height: 30vh;
+        }
+        .card{
+            height: 55vh;
+            width: 25rem;
+        }
+
+        .card-body{
+            
+            overflow-y: scroll;
+        }
+
+        .card-title{
+            color: #4367b4;
+        }
+
+        #carouselIndicators {
+            max-width: 80%;
+            margin: 10% auto;
+        }
+
+        .naslov-dela{
+            text-align: center;
+            margin-bottom: 2vh;
+            color:#fff;
+        }
+    </style>
+</head>
+<body>
+    <nav class="d-flex justify-content-between align-items-center fixed-top">
+        <!-- Logo  -->
+        <a href="index.html" class="nav-link">
+            <img src="slike/logo.svg" alt="Logo" style="height:50px;"> 
+            Veslacki klub
+        </a>
+        <!-- Desni linkovi -->
+        <div class="nav">
+            <a class="nav-link" href="index.html">Početna</a>
+            <a class="nav-link" href="rezultati.html">Rezultati</a>
+            <a class="nav-link" href="galerija.html">Galerija</a>
+            <a class="nav-link" href="kupovina_karata.html">Kupovina karata</a>
+            <a class="nav-link" href="kontakt.html">Kontakt</a>
+            <a class="nav-link" href="anketa.html">Anketa</a>
+        </div>
+    </nav>
+
+    <img src="slike/grupna_slika.png" alt="" width="100%">
+
+
+    <div id="carouselIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#carouselIndicators" data-bs-slide-to="2"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="slike/carosel1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption ">
+                <p><b>Otkrij snagu veslanja</b></p>
+                <p>Pridruži se našem veslačkom klubu i doživi savršenu ravnotežu snage, izdržljivosti i timskog rada na vodi.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="slike/carosel2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption ">
+                <p><b>Zajednica na vodi i van nje</b></p>
+                <p>Naš klub nije samo trening - to je mesto gde se grade prijateljstva, dele uspesi i pruža međusobna podrška.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="slike/carosel3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption ">
+                <p><b>Tvoje putovanje počinje ovde</b></p>
+                <p>Uz stručne trenere, vrhunsku opremu i prelepo prirodno okruženje, nema boljeg mesta da započneš ili unaprediš svoje veslačko iskustvo.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselIndicators" data-bs-slide="prev" >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselIndicators" data-bs-slide="next" >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <h1 class="naslov-dela" style="margin-top:-50px">Vesti</h1>
+    <div class="d-flex justify-content-around">
+
+        <div class="card" >
+            <img src="slike/card1.png" class="card-img-top" alt="Slika 1">
+            <div class="card-body">
+                <h4 class="card-title">PALIĆKO TAKMIČENJE</h4>
+                <h6 class="card-text">I ove godine na Palićkom jezeru održana je tradicionalna regata Vojvodina Open, 
+                    63 po redu na kojoj su nastupili domaći i klubovi iz inostranstva. Smederevski veslači su bili raspoloženi za nadmetanje i sa Palića u Smederevo su se vratili sa devet medalja. 
+                    Prvog dana takmičenja, u subotu, osvojene su dve zlatne i po jedna srebrna i bronzana medalja. Tara Božanović u juniorskom skifu za žene i kadetski četverac bez kormilara u sastavu Nikola Miličević, 
+                    Lazar Lazarević, Andreja Jovanović i Dušan Đokić osvojili su najsjajnija odličja. Pionirski četverac skul (Andrija Nedeljković, Vidak Drašković, Vukašin Živanović i Vasil Božanović okitio se srebrnom medaljom, 
+                    a bronza je pripala pionirkama u dubl skulu u sastavu Minja i Dunja Savić.
+                </h6>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="slike/card2.png" class="card-img-top" alt="Slika 2">
+            <div class="card-body">
+                <h4 class="card-title">ŠEST ZLATNIH MEDALJA SA DRUGE REGATE KUPA SRBIJE </h4>
+                <h6 class="card-text">Na drugoj regati Kupa Srbije, održanoj na Adi Ciganliji, veslači Smedereva osvojili su šest zlatnih medalja. 
+                    Smederevci su bili ubedljivi u skifu. Kod mlađih seniora slavio je Lazar Živanović, Đorđe Rapajić bio je najbolji kod juniora, 
+                    a Tara Božanović trijumfovala je u konkurenciji juniorki.Kadetski četverac bez kormilara u sastavu Lazar Lazarević, Andreja Jovanović,
+                    Dušan Đokić i Nikola Milićević bio je najbolji u svojoj kategoriji, a zlatu iz četverca, Nikola Milićević i dušan Đokić dodali su najsjajnije odličje i 
+                    u disciplini dvojac bez kormilara. Poslednje zlatno odličje pripalo je pionirskom četvercu sa kormilarom u kome su veslali Andrija Nedeljković, Vidak Drašković, 
+                    Vukašin Živanović, Vasil Božanović i kormilarka Dunja Petrović.Zapažen rezultat ostvarile su Minja i Dunja Savić u pionirskom dubl skulu plasmanom na peto mesto, 
+                    dok je pionirski četverac skul (Ognjen Paunović, Mateja Martić, Sergej Cvetković i Filip Vukelić) zauzeo odlično četvrto mesto. U skifu za kadetkinje Nadežda Radulović 
+                    je takođe bila ćetvrta. Naredna regata koja očekuje veslače Smedereva biće treća regata Kupa Srbije početkom juna.
+                </h6>
+            </div>
+        </div>
+
+        <div class="card" >
+            <img src="slike/card3.png" class="card-img-top" alt="Slika 3">
+            <div class="card-body">
+                <h4 class="card-title">NAJBOLJI U ČURUGU</h4>
+                <h6 class="card-text">Veslači Smedereva ostvarili su odličan rezultat na četvrtom kolu Omladinske lige Srbije održanom u Čurugu. Po završetku takmičenja njima je, 
+                    pored velikog broja medalja, pripao i pehar namenjen najboljem klubu na ovoj regati. Smederevci su se iz Čuruga vratili sa 5 zlatnih, dve srebrne i jednom 
+                    brojzanom medaljom.
+                    <br>
+                    Zlatnim medaljama okitili su se Andreja Jovanović i Dušan Đokić u kadetskom dvojcu bez kormilara, 
+                    pionirskom dubl skulu u sastavu Vidak drašković i Vasil Božanović, na najviše pobedničko postolje popeli su 
+                    se pioniri u četvercu sa kormilarom (Sergej Cvetković, Mateja Martić, Ignjat Dobrosavljević, Filip Vukelić i 
+                    kormilar Lena Bokalović). Kadetski četverac bez kormilara u kome su veslali Nikola Milićević, Lazar Lazarević, 
+                    Andreja Jovanović i Dušan Đokić bio je bez premca u svojoj konkurenciji, a poslednje zlatno odličje pripalo je 
+                    kadetkinjama u četverac skulu u sastavu Dunja Petrović, Danica jakšić, Minja i Dunja Savić.
+                    <br>
+                    Srebrne medalje osvojili su Nikola Milićević i Lazar Lazarević u kadetskom dvojcu bez i pionirski dubl skul u sastavu Lazar Pešterac - 
+                    Vukašin Živanović. Jedina bronzana medalja pripala je Nadeždi Radulović u kadetskom skifu.
+                    Za dve nedelje veslače Smedereva očekuje tradicionalna regata na Palićkom jezeru.
+                </h6>
+            </div>
+        </div>
+
+
+        <div class="card" >
+            <img src="slike/card4.png" class="card-img-top" alt="Slika 4">
+            <div class="card-body">
+                <h4 class="card-title">TREĆI U GENERALNOM PLASMANU</h4>
+                <h6 class="card-text">
+                    Veslači Smedereva ostvarili su zapažen rezultat na prvom ovogodišnjem takmičenju održanom u Kristalnoj dvorani u Zrenjaninu. Na državnom prvenstvu na ergometrima Smederevci su osvojili pet medalja, tri zlatne i dve bronzane.
+                    Najsjajnija odličja pripala su Lazaru Živanoviću u skifu u konkurenicji seniora B, Tari Božanović, takođe u sakifu kod lakih seniorki i pionirskom četverac skulu u sastavu Vidak Drašković, Ognjen Paunović, Lazar Pešterac i Vukašin Živanović.
+                    Do bronzanih odličja doveslali su pionirka Minja Savić u skifu i i dubl skul u sastavuDunja Savić i Anđela Pavić.
+                    <br>
+                    U konačnom plasmanu veslači Smedereva zauzeli su odlično treće mesto sa pet osvojenih medlaja iz prvoplasiranog Partizana i drugoplasirane Crvene zvezde koji su osvojili 14 odnosno 11 odličja.
+                </h6>
+            </div>
+        </div>
+    </div>
+
+
+    <h1 class="naslov-dela" style="margin-top:100px">Sponzori</h1>
+    <div class="logo-container">
+            <div class="slider-logo-track">
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand1.jpg" alt="Logo 1"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand2.png" alt="Logo 2"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand3.png" alt="Logo 3"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand4.png" alt="Logo 4"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand5.png" alt="Logo 5"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand6.jpg" alt="Logo 6"></a> 
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand7.png" alt="Logo 7"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand8.jpg" alt="Logo 8"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand9.png" alt="Logo 9"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand1.jpg" alt="Logo 1"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand2.png" alt="Logo 2"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand3.png" alt="Logo 3"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand4.png" alt="Logo 4"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand5.png" alt="Logo 5"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand6.jpg" alt="Logo 6"></a> 
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand7.png" alt="Logo 7"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand8.jpg" alt="Logo 8"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand9.png" alt="Logo 9"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand1.jpg" alt="Logo 1"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand2.png" alt="Logo 2"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand3.png" alt="Logo 3"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand4.png" alt="Logo 4"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand5.png" alt="Logo 5"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand6.jpg" alt="Logo 6"></a> 
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand7.png" alt="Logo 7"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand8.jpg" alt="Logo 8"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand9.png" alt="Logo 9"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand1.jpg" alt="Logo 1"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand2.png" alt="Logo 2"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand3.png" alt="Logo 3"></a>
+                </div>
+                <div class="slider-item">
+                    <a href="prodavnice.html"><img class="logo" src="slike/brand4.png" alt="Logo 4"></a>
+                </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer d-flex justify-content-around align-items-center" style="height: 200px;">
+            <span class="m-3">
+                <a href="index.html">
+                    <img src="slike/logo.svg" alt="Vrh logo" style="height: 11rem; width: auto;" >
+                </a>
+            </span>
+            <span class="ps-5">
+                <h4 class="p-5 ms-5 me-5">Mi volimo da pravimo velike stvari i obećavamo da nećemo stati. Pridružite nam se na našim društvenim mrežama i pomozite nam u tome svojim mislima i idejama!</h4>
+                <span class="ps-5 pe-5 d-flex justify-content-between align-items-center">
+                    <span>
+                        <h6 style="display: inline-block;opacity: 0.5;">Copyright &copy; 2025 Veslački klub doo. Sva prava zadržana.</h6>
+                    </span>   
+                    <span>
+                        <a href="https://www.tiktok.com/"><img src="slike/tiktok.svg" class="img-fluid ps-1" style="height: 1.5rem;" alt="tiktok logo"></a>
+                        <a href="https://twitter.com/" class="ps-1"><img src="slike/x-twitter.svg" class="img-fluid ps-1" style="height: 1.5rem;" alt="x,twitter logo"></a>
+                        <a href="https://www.facebook.com/viserbgd/?locale=sr_RS" class="ps-1"><img src="slike/facebook-f.svg" class="img-fluid ps-1" style="height: 1.5rem;"  alt="facebook logo"></a>
+                        <a href="https://www.instagram.com/viserbgd/" class="ps-1"><img src="slike/instagram.svg" class="img-fluid ps-1" style="height: 1.5rem;" alt="instagram logo"></a>
+                    </span>
+                </span>
+            </span>
+            
+                   
+        </div>
+    </footer>
+</body>
+</html>

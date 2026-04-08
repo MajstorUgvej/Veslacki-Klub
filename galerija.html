@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerija</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .gallery-img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.2);
+            border:2px solid white;
+            z-index: 1;
+        }
+        
+    </style>
+</head>
+<body>
+    <nav class="d-flex justify-content-between align-items-center fixed-top">
+        <!-- Logo  -->
+        <a href="index.html" class="nav-link">
+            <img src="slike/logo.svg" alt="Logo" style="height:50px;"> 
+        </a>
+        <!-- Desni linkovi -->
+        <div class="nav">
+            <a class="nav-link" href="index.html">Početna</a>
+            <a class="nav-link" href="rezultati.html">Rezultati</a>
+            <a class="nav-link" href="galerija.html">Galerija</a>
+            <a class="nav-link" href="kupovina_karata.html">Kupovina karata</a>
+            <a class="nav-link" href="kontakt.html">Kontakt</a>
+            <a class="nav-link" href="anketa.html">Anketa</a>
+        </div>
+    </nav>
+    
+    <div class="container py-5">
+        <h1 style="text-align: center; color: white">Galerija</h1>
+        <div class="row g-3">
+
+            <div class="col-4">
+                <div class="ratio ratio-16x9">
+                    <img src="slike/galerija1.jpg" class="gallery-img rounded" alt="slika1">
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="ratio ratio-16x9">
+                    <img src="slike/galerija2.jpg" class="gallery-img rounded" alt="slika2">
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="ratio ratio-16x9">
+                    <img src="slike/galerija3.jpg" class="gallery-img rounded" alt="slika3">
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="ratio ratio-16x9">
+                    <img src="slike/galerija4.jpg" class="gallery-img rounded" alt="slika4">
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="ratio ratio-16x9">
+                    <img src="slike/galerija5.jpg" class="gallery-img rounded" alt="slika5">
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="ratio ratio-16x9">
+                    <img src="slike/galerija6.jpg" class="gallery-img rounded" alt="slika6">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer d-flex justify-content-center align-items-center" style="height: 60px;position: fixed;">
+            <span>
+                <h6 style="display: inline-block;">&copy; 2025 Veslački klub doo. Sva prava zadržana.</h6>
+                <a href="https://www.facebook.com/viserbgd/?locale=sr_RS"><img src="slike/facebook-f.svg" class="img-fluid ps-1" style="width: 1rem;"  alt="facebook"></a>
+                <a href="https://www.instagram.com/viserbgd/"><img src="slike/instagram.svg" class="img-fluid ps-1" style="width: 1.5rem;" alt="instagram"></a>
+            </span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anketa</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+        .form-container {
+            max-width: 600px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .btn-submit {
+            background-color: #eb1632;
+            color: white;
+            border: 0.1em solid black;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .btn-submit:hover{
+            border: 0.1em solid black;
+        }
+
+        .red-bg {
+            background-color: #ffcccc;
+        }
+        .yellow-bg {
+            background-color: #ffffcc;
+        }
+        .green-bg {
+            background-color: #ccffcc;
+        }
+
+        main{
+            height: 81.9vh;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="d-flex justify-content-between align-items-center fixed-top">
+        <!-- Logo  -->
+        <a href="index.html" class="nav-link">
+            <img src="slike/logo.svg" alt="Logo" style="height:50px;"> 
+        </a>
+        <!-- Desni linkovi -->
+        <div class="nav">
+            <a class="nav-link" href="index.html">Početna</a>
+            <a class="nav-link" href="rezultati.html">Rezultati</a>
+            <a class="nav-link" href="galerija.html">Galerija</a>
+            <a class="nav-link" href="kupovina_karata.html">Kupovina karata</a>
+            <a class="nav-link" href="kontakt.html">Kontakt</a>
+            <a class="nav-link" href="anketa.html">Anketa</a>
+        </div>
+    </nav>
+    
+    <main>
+        <div class="container form-container">
+            <h2 style="text-align: center;">Anketa o Veslačkom klubu</h2>
+            <form id="anketa-forma">
+                <div class="form-group">
+                    <label for="zaposleni"><h6>Kako ocenjujete naše zaposlene?</h6></label>
+                    <select id="zaposleni" class="form-control" required>
+                        <option value="" disabled selected>Izaberite ocenu</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="oprema"><h6>Kako ocenjujete opremu?</h6></label>
+                    <select id="oprema" class="form-control" required>
+                        <option value="" disabled selected>Izaberite ocenu</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="sveukupno"><h6>Sveukupni utisak</h6></label>
+                    <select id="sveukupno" class="form-control" required>
+                        <option value="" disabled selected>Izaberite ocenu</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-submit">Predaj anketu</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer footer-expand-lg d-flex justify-content-center align-items-center" style="height: 60px;position: fixed;">
+            <span><h6 style="display: inline-block;">&copy; 2025 Veslački klub doo. Sva prava zadržana.</h6>
+                <a href="https://www.facebook.com/viserbgd/?locale=sr_RS"><img src="slike/facebook-f.svg" class="img-fluid ps-1" style="width: 1rem;"  alt="facebook"></a>
+                <a href="https://www.instagram.com/viserbgd/"><img src="slike/instagram.svg" class="img-fluid ps-1" style="width: 1.5rem;" alt="instagram"></a>
+            </span>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            $("#anketa-forma").submit(function (event) {
+                event.preventDefault();
+                const zaposleniOcena = parseFloat($("#zaposleni").val());
+                const opremaOcena = parseFloat($("#oprema").val());
+                const sveukupnoOcena = parseFloat($("#sveukupno").val());
+                const prosecnaOcena = (zaposleniOcena + opremaOcena + sveukupnoOcena) / 3;
+
+                const forma = $(".form-container");
+                if (prosecnaOcena >= 1 && prosecnaOcena <= 2.5) {
+                    forma.removeClass("yellow-bg");
+                    forma.removeClass("green-bg");
+                    forma.addClass("red-bg");
+                    alert("Hvala što ste popunili anketu!\nVaša prosečna ocena je " + prosecnaOcena.toFixed(2) + ". Potrudićemo se da popravimo greške.");
+                } else if (prosecnaOcena > 2.5 && prosecnaOcena <= 3.5) {
+                    forma.removeClass("red-bg");
+                    forma.removeClass("green-bg");
+                    forma.addClass("yellow-bg");
+                    alert("Hvala što ste popunili anketu!\nVaša prosečna ocena je " + prosecnaOcena.toFixed(2) + ". Radimo na unapređenju.");
+                } else {
+                    forma.removeClass("red-bg");
+                    forma.removeClass("yellow-bg");
+                    forma.addClass("green-bg");
+                    alert("Hvala što ste popunili anketu!\nVaša prosečna ocena je " + prosecnaOcena.toFixed(2) + ". Drago nam je što ste se super proveli u našem tržnom centru!");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
